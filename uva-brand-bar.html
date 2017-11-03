@@ -1,4 +1,8 @@
 <link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../uva-theme/uva-theme.html">
+<link rel="import" href="../app-layout/app-header/app-header.html">
+<link rel="import" href="../app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../uva-logos/uva-logos.html">
 
 <dom-module id="uva-brand-bar">
   <template>
@@ -6,8 +10,18 @@
       :host {
         display: block;
       }
+      app-header {
+        background-color: var(--color-jefferson-blue);
+      }
+      uva-logos {
+        height: 21.77px;
+      }
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <app-header>
+      <app-toolbar>
+        <uva-logos reverse two-color></uva-logos>
+      </app-toolbar>
+    </app-header>
   </template>
 
   <script>
