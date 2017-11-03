@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="uva-brand-bar">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `uva-brand-bar`
+     * https://brand.virginia.edu/tools-templates/web-design/design-elements/brand-bar-search
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class UvaBrandBar extends Polymer.Element {
+      static get is() { return 'uva-brand-bar'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'uva-brand-bar'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(UvaBrandBar.is, UvaBrandBar);
+  </script>
+</dom-module>
